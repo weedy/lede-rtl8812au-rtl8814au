@@ -1,0 +1,20 @@
+commit 9260f77aab06f0d4ec8efc9028f221c624619746
+Author: uminokoe <uminokoe@users.noreply.github.com>
+Date:   Sat Sep 24 14:22:44 2016 +0800
+
+    Edited Kconfig for RTL8811AU/RTL8812AU/RTL8821AU.
+
+diff --git b/Kconfig a/Kconfig
+index bddf51b..4887f2b 100644
+--- b/Kconfig
++++ a/Kconfig
+@@ -1,6 +1,6 @@
+-config RTL8821AU
+-	tristate "Realtek 8821A USB WiFi"
++config RTL8814AU
++	tristate "Realtek 8814A USB WiFi"
+ 	depends on USB
+ 	---help---
+-	  Help message of RTL8821AU
++	  Help message of RTL8814AU
+ 

@@ -1,0 +1,43 @@
+commit 8d3310013bbf98d45d5c60d19d154975fd91f987
+Author: uminokoe <uminokoe@users.noreply.github.com>
+Date:   Sat Sep 24 13:10:40 2016 +0800
+
+    Edited Makefile for RTL8811AU/RTL8812AU/RTL8821AU compilation.
+
+diff --git b/Makefile a/Makefile
+index 216666f..5bd74e7 100644
+--- b/Makefile
++++ a/Makefile
+@@ -26,11 +26,11 @@ CONFIG_AUTOCFG_CP = n
+ ########################## WIFI IC ############################
+ CONFIG_MULTIDRV = n
+ CONFIG_RTL8188E = n
+-CONFIG_RTL8812A = y
+-CONFIG_RTL8821A = y
++CONFIG_RTL8812A = n
++CONFIG_RTL8821A = n
+ CONFIG_RTL8192E = n
+ CONFIG_RTL8723B = n
+-CONFIG_RTL8814A = n
++CONFIG_RTL8814A = y
+ CONFIG_RTL8723C = n
+ CONFIG_RTL8188F = n
+ ######################### Interface ###########################
+@@ -1686,15 +1686,12 @@ $(MODULE_NAME)-$(CONFIG_MP_INCLUDED) += core/rtw_mp.o \
+ ifeq ($(CONFIG_RTL8723B), y)
+ $(MODULE_NAME)-$(CONFIG_MP_INCLUDED)+= core/rtw_bt_mp.o
+ endif
+-ifeq ($(CONFIG_RTL8821A), y)
+-$(MODULE_NAME)-$(CONFIG_MP_INCLUDED)+= core/rtw_bt_mp.o
+-endif
+ 
+-obj-$(CONFIG_RTL8812AU_8821AU) := $(MODULE_NAME).o
++obj-$(CONFIG_RTL8814AU) := $(MODULE_NAME).o
+ 
+ else
+ 
+-export CONFIG_RTL8812AU_8821AU = m
++export CONFIG_RTL8814AU = m
+ 
+ all: modules
+ 

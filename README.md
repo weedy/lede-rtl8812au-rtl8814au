@@ -1,2 +1,3 @@
 # lede-rtl8812au-rtl8814au
-Makefiles for building rtl8812au or rtl8814au drivers for LEDE/OpenWRT 
+I have not had any luck getting these to work on mips systems.
+But apparently x86 is ok? Maybe.
